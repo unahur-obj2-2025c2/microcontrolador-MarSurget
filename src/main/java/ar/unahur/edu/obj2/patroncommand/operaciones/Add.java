@@ -1,13 +1,14 @@
 package ar.unahur.edu.obj2.patroncommand.operaciones;
 
-import ar.unahur.edu.obj2.patroncommand.Programable;
+import ar.unahur.edu.obj2.patroncommand.microcontrolador.Programable;
 
-public class Add implements Operable{
+public class Add extends Comando{
 
     @Override
-    public void execute(Programable micro) {
-        micro.setAcumuladorA(micro.getAcumuladorA() + micro.getAcumuladorB());
-        micro.setAcumuladorB(0);
+    public void doExecute(Programable micro) {
+        Integer resultado = micro.getAcumuladorA() + micro.getAcumuladorB();
+        micro.setAcumuladorA(resultado);
+        micro.setAcumuladorB(0);    
     }
 
 }

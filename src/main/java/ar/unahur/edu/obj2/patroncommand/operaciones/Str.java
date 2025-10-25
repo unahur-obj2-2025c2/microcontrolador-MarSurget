@@ -1,8 +1,8 @@
 package ar.unahur.edu.obj2.patroncommand.operaciones;
 
-import ar.unahur.edu.obj2.patroncommand.Programable;
+import ar.unahur.edu.obj2.patroncommand.microcontrolador.Programable;
 
-public class Str implements Operable {    
+public class Str extends Comando {    
     private Integer addr;
 
     public Str(Integer addr) {
@@ -10,7 +10,7 @@ public class Str implements Operable {
     }
 
     @Override
-    public void execute(Programable micro) {
+    public void doExecute(Programable micro) {
         micro.setAddr(addr);
     }
     

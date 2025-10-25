@@ -1,12 +1,12 @@
 package ar.unahur.edu.obj2.patroncommand.operaciones;
 
-import ar.unahur.edu.obj2.patroncommand.Programable;
+import ar.unahur.edu.obj2.patroncommand.microcontrolador.Programable;
 
-public class Nop implements Operable{
+public class Nop extends Comando{
 
     @Override
-    public void execute(Programable micro) {  // no incremento pc aca porque ya lo hace el run 
-        
+    public void doExecute(Programable micro) { 
+         // no incremento pc aca porque ya lo hace el super
     }
 
 }

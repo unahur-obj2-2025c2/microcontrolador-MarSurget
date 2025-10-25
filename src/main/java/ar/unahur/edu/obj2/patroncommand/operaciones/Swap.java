@@ -1,14 +1,13 @@
 package ar.unahur.edu.obj2.patroncommand.operaciones;
 
-import ar.unahur.edu.obj2.patroncommand.Programable;
+import ar.unahur.edu.obj2.patroncommand.microcontrolador.Programable;
 
-public class Swap implements Operable{
+public class Swap extends Comando{
 
     @Override
-    public void execute(Programable micro) {
+    public void doExecute(Programable micro) {
         Integer valorA = micro.getAcumuladorA();
-        Integer valorB = micro.getAcumuladorB();
-        micro.setAcumuladorA(valorB);
+        micro.setAcumuladorA(micro.getAcumuladorB());
         micro.setAcumuladorB(valorA);
     }
 

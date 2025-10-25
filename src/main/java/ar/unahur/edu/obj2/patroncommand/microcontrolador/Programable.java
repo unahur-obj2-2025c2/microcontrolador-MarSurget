@@ -1,4 +1,4 @@
-package ar.unahur.edu.obj2.patroncommand;
+package ar.unahur.edu.obj2.patroncommand.microcontrolador;
 
 import java.util.List;
 
@@ -26,4 +26,9 @@ public interface Programable { // aca describe q sabe hacer un microcontrolador,
 
     void reset();  // reinicia el microp pone los acumuladores, memoria y pc en estado inicial
 
+    // PARTE DOS
+
+    Programable copiar();
+
+    void copiarDesde(Programable microDeRespaldo);
 }
